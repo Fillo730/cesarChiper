@@ -1,0 +1,14 @@
+/* Stile per il footer */
+footer {
+    background-color: #ffffe0; /* Giallo chiaro per lo sfondo */
+    color: #333; /* Colore del testo scuro per il contrasto */
+    padding: 20px;
+    border-top: 2px solid #f7c600; /* Bordo superiore giallo chiaro */
+    text-align: center; /* Centra il testo */
+}
+
+footer.footer p {
+    margin: 10px 0;
+    font-size: 14px; /* Dimensione del font per una lettura chiara */
+}
+

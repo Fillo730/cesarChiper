@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://caesarcipher.net/wp-content/uploads/2022/11/caesar-cipher-wheel-150x150.png" sizes="32x32">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="description.css">
+    <script src="example.js"></script>
+    <title>Description</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/index.html"><img id="imageHeader" src="../public/CaesarChiper.jpeg" alt="cifrarioImage"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../description/description.html">Description</a></li>
+                    <li><a href="../history/history.html">History</a></li>
+                    <li><a href="../Security/security.html">Security</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="generalDescription">
+        <h2>Che cos'è?</h2>
+        <p> 
+            In crittografia, il cifrario di Cesare è uno dei più antichi algoritmi crittografici mai utilizzati dall'Umanità 
+            e di cui si abbia qualche evidenza storica.È un cifrario a sostituzione monoalfabetica, in cui ogni lettera
+            del testo in chiaro viene sostituita, all'interno del testo cifrato, da un'altra lettera che si trova un certo numero di 
+            posizioni dopo nell'alfabeto. Questi tipi di cifrati sono detti anche cifrari a scorrimento proprio a causa del modo in cui 
+            operano: la sostituzione avviene lettere per lettere scorrendo il testo dall'inizio alla fine.
+        </p>
+    </div>
+    <div id="example">
+        <h4>Esempio</h4>
+        <p>
+            Immaginiamo di avere una stringa arbitraria, per esempio "Ciao mi chiamo Marco" e di doverla cifrare tramite questo meccanismo
+            utilizzando come chiave il numero 3.
+            Come detto precedentemente, si parte dalla prima lettera e si procede lettera per lettera. La prima lettere in questo caso è C.
+            Per ottenere la corrispondente lettera cifrata dobbiamo semplicemente spostarci di 3 posizioni nell'alfabeto, quindi da C
+            andiamo a D, poi E e infine F, che è il risultato finale. Poi passiamo alla seconda lettera, ovvero i e facciamo la stessa cosa,
+            ottenendo L (ricordate le lettere dell'alfabeto inglese).
+            Successivamente è mostrata una piccola tabella contenente due righe: la prima contiene le lettere dell'alfabeto inglese, la 
+            seconda la stessa cosa ma spostate di una certa posizione, selezionabile tramite apposita casella
+        </p>
+
+        <table id="table">
+            <tr class="table-tr" id="row1"></tr>
+            <tr class="table-tr" id="row2"></tr>
+        </table>
+        <label for="shiftInput">Shift Amount:</label>
+        <input id="shiftInput" type="number" max="26" min="0" value="0" onchange="updateTable()">
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Il Mio Sito Web</p>
+        <p>Il nostro sito è progettato per essere accessibile a tutti gli utenti.</p>
+    </footer>
+</body>
+</html>

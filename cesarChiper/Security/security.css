@@ -1,0 +1,119 @@
+/* Stile per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Colore di sfondo leggero */
+    color: #333; /* Colore del testo scuro */
+    margin: 0;
+    padding: 0;
+}
+
+#div-security {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#div-security h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+}
+
+#div-security p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+.text-content {
+    flex: 1;
+    min-width: 200px; /* Larghezza minima per il testo */
+}
+
+.table-content {
+    flex: 1;
+    min-width: 200px; /* Larghezza minima per la tabella */
+}
+
+
+
+/* Stile per la tabella */
+#table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina gli spazi tra le celle */
+    margin-top: 20px;
+}
+
+.table-tr {
+    background-color: #fafafa; /* Sfondo leggermente diverso per le righe */
+    border-bottom: 1px solid #dddddd; /* Bordo grigio chiaro tra le righe */
+}
+
+.table-td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #dddddd; /* Bordo grigio chiaro intorno alle celle */
+}
+
+.table-tr:hover {
+    background-color: #f0f8ff; /* Colore di sfondo leggero al passaggio del mouse */
+}
+
+/* Stile per la sezione generale degli esempi storici */
+#div-implementation {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#div-implementation h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+}
+
+#div-implementation p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow-x: auto;
+}
+code {
+    display: block;
+    white-space: pre;
+}
+.line-numbers {
+    counter-reset: line;
+}
+.line-numbers > span {
+    display: block;
+    counter-increment: line;
+    padding-right: 10px;
+    text-align: right;
+    color: #888;
+}
+.line-numbers > span::before {
+    content: counter(line);
+    display: inline-block;
+    width: 2em;
+}
+.highlight {
+    color: #d14;
+}

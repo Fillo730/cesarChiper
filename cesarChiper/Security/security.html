@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://caesarcipher.net/wp-content/uploads/2022/11/caesar-cipher-wheel-150x150.png" sizes="32x32">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="security.css">
+    <title>Security</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/index.html"><img id="imageHeader" src="../public/CaesarChiper.jpeg" alt="cifrarioImage"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../description/description.html">Description</a></li>
+                    <li><a href="../history/history.html">History</a></li>
+                    <li><a href="../Security/security.html">Security</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="div-security">
+        <h2>Sicurezza del Cifrario di Cesare</h2>
+        <p>
+            Il cifrario di Cesare può essere facilmente decifrato anche in uno scenario in cui si dispone solo del testo cifrato. 
+            Poiché ci sono solo un numero limitato di possibili spostamenti (25 in inglese), un attaccante può effettuare un attacco a 
+            forza bruta decifrando il messaggio, o parte di esso, utilizzando ciascun possibile spostamento. La descrizione corretta sarà 
+            quella che ha senso come testo in inglese. Un esempio è mostrato a destra per il testo cifrato "exxegoexsrgi"; il testo in 
+            chiaro candidato per lo spostamento di quattro "attackatonce" è l'unico che ha senso come testo in inglese. Un altro tipo di 
+            attacco a forza bruta consiste nello scrivere l'alfabeto sotto ciascuna lettera del testo cifrato, partendo da quella lettera. 
+            Anche in questo caso, la decifrazione corretta è quella che ha senso come testo in inglese. Questa tecnica è talvolta 
+            conosciuta come "completamento della componente in chiaro".
+        </p>
+        <table id="table">
+            <tr class="table-tr">
+                <td class="table-td">Shift di Decriptazione</td>
+                <td class="table-td">Testo in Chiaro</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">0</td>
+                <td class="table-td">exxegoexsrgi</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">1</td>
+                <td class="table-td">dwwdfndwrqfh</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">2</td>
+                <td class="table-td">cvvcemcvqpeg</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">3</td>
+                <td class="table-td">buubdlbupodf</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">4</td>
+                <td class="table-td">attackatonce</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">.....</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">25</td>
+                <td class="table-td">fyyfhpfytshj</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="div-implementation">
+        <h2>Implementazione del Cifrario</h2>
+        <p>
+            Il cifrario di Cesare può essere facilmente implementato in qualsiasi linguaggio di programmazione. Successivamente, ho inserito
+            un'immagine dell'implementazione utilizzando C:
+        </p>
+        <pre class="line-numbers"><code>
+            #include <stdio.h>
+            #include <stdlib.h>
+            #include <string.h>
+            #include <limits.h>
+            
+            int stringToInteger(const char *str, int *out_num) {
+                long temp;
+                char extra;
+                if (sscanf(str, "%ld%c", &temp, &extra) != 1) {
+                    return -1; // Errore di conversione
+                }
+                if (temp < INT_MIN || temp > INT_MAX) {
+                    return -2; // Valore fuori dal range degli interi
+                }
+                *out_num = (int)temp;
+                return 0;
+            }
+            
+            void cesarEncrypt(char *input, int key) {
+                for (int i = 0; input[i] != '\0'; i++) {
+                    if (input[i] >= 'A' && input[i] <= 'Z') {
+                        input[i] = ((input[i] - 'A' + key) % 26) + 'A';
+                    } else if (input[i] >= 'a' && input[i] <= 'z') {
+                        input[i] = ((input[i] - 'a' + key) % 26) + 'a';
+                    } else if (input[i] >= '0' && input[i] <= '9') {
+                        input[i] = ((input[i] - '0' + key) % 10) + '0';
+                    }
+                }
+            }
+            
+            void cesarDecrypt(char *input, int key) {
+                for (int i = 0; input[i] != '\0'; i++) {
+                    if (input[i] >= 'A' && input[i] <= 'Z') {
+                        input[i] = ((input[i] - 'A' - key + 26) % 26) + 'A';
+                    } else if (input[i] >= 'a' && input[i] <= 'z') {
+                        input[i] = ((input[i] - 'a' - key + 26) % 26) + 'a';
+                    } else if (input[i] >= '0' && input[i] <= '9') {
+                        input[i] = ((input[i] - '0' - key + 10) % 10) + '0';
+                    }
+                }
+            }
+            
+            int main(int argc, char** argv) {
+                printf("Program that, given an input string and a key, encrypts or decrypts it using a certain input key\n");
+            
+                if(argc != 4) {
+                    printf("USAGE: ./cesarCipher.out inputString key(integer value between 0 and 26) e/d(encrypt or decrypt)\n");
+                    exit(-1);
+                }
+            
+                if(strlen(argv[1]) == 0) {
+                    printf("Impossible to proceed // The input string is empty\n");
+                    exit(-2);
+                }
+            
+                int key;
+                if(stringToInteger(argv[2], &key) != 0){
+                    printf("Impossible to proceed // The input key is not an integer or is too big\n");
+                    exit(-2);
+                }
+            
+                if(key < 0 || key > 26) {
+                    printf("Impossible to proceed // The key's value is invalid\n");
+                    exit(-2);
+                }
+            
+                if(strcmp(argv[3], "e") != 0 && strcmp(argv[3], "d") != 0) {
+                    printf("Impossible to proceed // The operation is neither 'e' for encrypt nor 'd' for decrypt\n");
+                    exit(-2);
+                }
+            
+                char inputString[256];
+                strncpy(inputString, argv[1], 255);
+                inputString[255] = '\0'; // Assicurarsi che la stringa sia terminata
+            
+                if(strcmp(argv[3], "e") == 0) { // encrypt requested
+                    cesarEncrypt(inputString, key);
+                    printf("Encrypted string: %s\n", inputString);
+                }
+                else { // decrypt requested
+                    cesarDecrypt(inputString, key);
+                    printf("Decrypted string: %s\n", inputString);
+                }
+            
+                return 0;
+            }
+                </code></pre>            
+    </div>
+
+    
+   
+
+    <footer class="footer">
+        <p>&copy; 2024 Il Mio Sito Web</p>
+        <p>Il nostro sito è progettato per essere accessibile a tutti gli utenti.</p>
+    </footer>
+</body>
+</html>

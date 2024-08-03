@@ -1,0 +1,81 @@
+/* Assicurati che html e body occupino tutta l'altezza della pagina */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imposta il body per utilizzare Flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenitore principale per occupare tutto lo spazio disponibile */
+#mainContent {
+  flex: 1; /* Permette al contenitore di espandersi per riempire lo spazio disponibile */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente il contenuto */
+  align-items: center; /* Centra orizzontalmente il contenuto */
+  background-color: #f0f8ff;
+}
+
+/* Stile per la sezione di testo */
+#TextSection {
+  background-color: #ffffe0; /* Giallo chiaro */
+  padding: 40px; /* Aumenta il padding per maggiore spazio interno */
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%; /* Assicura che la sezione utilizzi tutta la larghezza disponibile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge ombra per un effetto di sollevamento */
+}
+
+/* Stile per gli elementi all'interno della sezione di testo */
+#TextSection .Element {
+  margin-bottom: 20px; /* Aumenta il margine tra gli elementi */
+}
+
+#TextSection label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px; /* Aumenta il margine inferiore per maggiore spazio */
+  color: #333; /* Colore del testo scuro per il contrasto */
+}
+
+#TextSection input[type="text"],
+#TextSection input[type="number"] {
+  width: 100%;
+  padding: 15px; /* Aumenta il padding per maggiore spazio interno */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza */
+  font-size: 18px; /* Aumenta la dimensione del font per una leggibilità migliore */
+}
+
+#TextSection button {
+  background-color: #f7c600; /* Colore giallo chiaro */
+  border: none;
+  color: white;
+  padding: 15px 20px; /* Aumenta il padding per pulsanti più grandi */
+  margin-right: 15px; /* Aumenta il margine tra i pulsanti */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px; /* Aumenta la dimensione del font per i bottoni */
+  transition: background-color 0.3s, transform 0.2s; /* Aggiunge transizioni per l'effetto hover */
+}
+
+#TextSection button:hover {
+  background-color: #f0b700; /* Colore giallo scuro per l'hover */
+  transform: scale(1.05); /* Leggero ingrandimento per l'effetto hover */
+}
+
+#TextSection output {
+  display: block;
+  margin-top: 20px; /* Aumenta il margine superiore per maggiore spazio */
+  padding: 15px; /* Aumenta il padding per maggiore spazio interno */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 18px; /* Aumenta la dimensione del font per il risultato */
+}

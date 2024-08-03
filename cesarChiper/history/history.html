@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://caesarcipher.net/wp-content/uploads/2022/11/caesar-cipher-wheel-150x150.png" sizes="32x32">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="history.css">
+    <title>History</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/index.html"><img id="imageHeader" src="../public/CaesarChiper.jpeg" alt="cifrarioImage"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../description/description.html">Description</a></li>
+                    <li><a href="../history/history.html">History</a></li>
+                    <li><a href="../Security/security.html">Security</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="div-history">
+        <h2>Storia Del Cifrario</h2>
+        <p>
+            Il cifrario di Cesare prende il nome da Giulio Cesare, che lo utilizzava con l'intento di proteggere i suoi messaggi criptati. 
+            Grazie allo storico Svetonio sappiamo che Cesare utilizzava in genere una chiave di 3 per il cifrario, come nel caso della 
+            corrispondenza militare inviata alle truppe comandate da Quinto Tullio Cicerone. Al tempo era sicuro perché gli avversari 
+            spesso non erano neanche in grado di leggere un testo in chiaro, men che mai uno cifrato; inoltre non esistevano metodi di 
+            crittanalisi in grado di rompere tale codice, per quanto banale.
+            Conosciamo anche altri che usarono questo cifrario al tempo di Cesare: Augusto, suo nipote, lo utilizzava con chiave 1, 
+            ma senza ripartire da sinistra in caso di fine dell'alfabeto. Quindi, scriveva B per A, C per B ma usava AA per Z.
+            Dalla scoperta dell'analisi delle frequenze da parte del matematico arabo Al-Kindi nell'XI secolo circa, tutti i cifrari di 
+            questo tipo sono divenuti molto semplici da rompere(Per approfondimenti in questo senso consultare la sezione security); 
+            nessuno è adatto per comunicazioni sicure allo stato tecnologico attuale, né lo è stato negli ultimi 1000 anni. 
+            Tuttavia, una forma di questo cifrario, chiamata ROT13, è ancora usata oggi per offuscare parti di un messaggio in modo da 
+            non renderle immediatamente comprensibili.
+        </p>
+    </div>
+
+    <div id="div-historyExamples">
+        <h2>Fatti storici interessanti</h2>
+        <p>
+            Il cifrario di Vigenère(generalizzazione dei cifrario di Cesare, XVI secolo) utilizza un cifrario di Cesare con uno spostamento 
+            diverso in ogni posizione del testo; il valore dello spostamento è definito usando una parola chiave ripetuta. Se la parola chiave è 
+            lunga quanto il messaggio, scelta a caso, non è mai conosciuta da nessun altro e non viene mai riutilizzata, questo è il cifrario
+             della one-time pad, provato inespugnabile. Tuttavia, i problemi legati all'uso di una chiave casuale lunga quanto il messaggio 
+             rendono il one-time pad difficile da usare nella pratica. Parole chiave più corte del messaggio (ad esempio, "Complete Victory" 
+             usata dalla Confederazione durante la Guerra Civile Americana) introducono un pattern ciclico che potrebbe essere rilevato con 
+             una versione statisticamente avanzata dell'analisi della frequenza.
+        </p>
+        <p>
+            Nell'aprile del 2006, il boss mafioso latitante Bernardo Provenzano fu catturato in Sicilia in parte perché alcuni dei suoi messaggi, 
+            scritti goffamente in una variazione del cifrario di Cesare, furono decifrati. Il cifrario di Provenzano utilizzava numeri, 
+            così che "A" fosse scritto come "4", "B" come "5", e così via.
+        </p>
+        <p>
+            Nel 2011, Rajib Karim fu condannato nel Regno Unito per "reati di terrorismo" dopo aver utilizzato il cifrario di Cesare per 
+            comunicare con attivisti islamici bengalesi, discutendo complotti per far esplodere aerei della British Airways o interrompere 
+            le loro reti IT. Anche se le parti avevano accesso a tecniche di crittografia molto migliori (Karim stesso usava PGP per 
+            la memorizzazione dei dati su dischi rigidi), scelsero di utilizzare il proprio schema (implementato in Microsoft Excel), 
+            rifiutando un programma di codifica più sofisticato chiamato Mujahedeen Secrets "perché i 'kaffir', o non credenti, ne sono a 
+            conoscenza, quindi deve essere meno sicuro".
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Il Mio Sito Web</p>
+        <p>Il nostro sito è progettato per essere accessibile a tutti gli utenti.</p>
+    </footer>
+</body>
+</html>

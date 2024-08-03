@@ -1,0 +1,56 @@
+/* Stile per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Colore di sfondo leggero */
+    color: #333; /* Colore del testo scuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per la sezione generale della descrizione */
+#div-history {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#div-history h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+}
+
+#div-history p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+/* Stile per la sezione generale degli esempi storici */
+#div-historyExamples {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#div-historyExamples h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+}
+
+#div-historyExamples p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}

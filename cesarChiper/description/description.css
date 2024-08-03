@@ -1,0 +1,94 @@
+/* Stile per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Colore di sfondo leggero */
+    color: #333; /* Colore del testo scuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per la sezione generale della descrizione */
+#generalDescription {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#generalDescription h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+}
+
+#generalDescription p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+/* Stile per la sezione esempio */
+#example {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+#example h4 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 20px;
+}
+
+#example p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Aggiunge spazio interno */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+/* Stile per la tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-tr td {
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    padding: 8px;
+    text-align: center;
+}
+
+.table-tr td:nth-child(odd) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le celle */
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333; /* Colore del testo */
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Angoli arrotondati per l'input */
+}
+
+input[type="number"]:focus {
+    border-color: #f7c600; /* Colore del bordo quando l'input è attivo */
+    outline: none; /* Rimuove il contorno predefinito del browser */
+}
+
+

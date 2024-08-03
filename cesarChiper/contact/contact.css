@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Colore di sfondo leggero */
+    color: #333; /* Colore del testo scuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per il contenitore principale */
+#div-presentation, #div-contactMe, #div-advice {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto di sollevamento */
+}
+
+/* Stile per il titolo */
+#div-presentation h2, #div-contactMe h2, #div-advice h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+    padding-bottom: 10px; /* Spazio sotto il titolo */
+    margin-bottom: 15px; /* Spazio sotto il titolo */
+}
+
+/* Stile per i paragrafi */
+#div-presentation p, #div-contactMe p, #div-advice p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    padding: 10px; /* Aggiunge spazio interno */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+#div-contactMe ul {
+    list-style: none; /* Rimuove i puntini dall'elenco */
+    padding: 0;
+    margin: 0; /* Assicura che non ci siano margini aggiuntivi */
+}
+
+#div-contactMe li {
+    margin: 0; /* Assicura che non ci siano margini tra gli elementi della lista */
+}
+
+#div-contactMe a {
+    color: #007bff; /* Colore blu per i link */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+#div-contactMe a:hover {
+    text-decoration: underline; /* Sottolineatura al passaggio del mouse sui link */
+}
+
+/* Aggiungi decorazione alle intestazioni dei div */
+#div-presentation::before, #div-contactMe::before, #div-advice::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #f7c600; /* Colore della linea decorativa */
+    margin-bottom: 15px; /* Spazio sotto la linea decorativa */
+    border-radius: 2px; /* Angoli arrotondati della linea */
+}
+
+/* Stile per il contenitore del consiglio */
+#div-advice {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per il contenuto */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    margin: 20px;
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto di sollevamento */
+}
+
+/* Stile per il titolo nella sezione di consiglio */
+#div-advice h2 {
+    color: #f7c600; /* Colore giallo per il titolo */
+    font-size: 24px;
+    padding-bottom: 10px; /* Spazio sotto il titolo */
+    margin-bottom: 15px; /* Spazio sotto il titolo */
+    border-bottom: 2px solid #f7c600; /* Sottolineatura decorativa */
+}
+
+/* Stile per i paragrafi nella sezione di consiglio */
+#div-advice p {
+    line-height: 1.6; /* Maggiore spaziatura tra le righe per una lettura più facile */
+    padding: 10px; /* Spazio interno per il testo */
+    border: 1px solid #dddddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #fafafa; /* Sfondo leggermente diverso per distinguere i paragrafi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    margin-bottom: 15px; /* Spaziatura inferiore tra i paragrafi */
+}
+
+/* Stile per le liste ordinate nella sezione di consiglio */
+#div-advice ol {
+    padding: 0;
+    margin: 0; /* Assicura che non ci siano margini aggiuntivi */
+    margin-left: 20px; /* Spazio a sinistra per le liste ordinate */
+    list-style-position: inside; /* Mantiene i numeri della lista all'interno del contenitore */
+}
+
+#div-advice li {
+    margin-bottom: 10px; /* Spazio inferiore tra gli elementi della lista */
+    line-height: 1.6; /* Maggiore spaziatura tra le righe della lista */
+}
+
+/* Stile per i link nella sezione di consiglio */
+#div-advice a {
+    color: #007bff; /* Colore blu per i link */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+#div-advice a:hover {
+    text-decoration: underline; /* Sottolineatura al passaggio del mouse sui link */
+}

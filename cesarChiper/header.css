@@ -1,0 +1,54 @@
+/* Stile per l'header */
+header {
+  background-color: #ffffe0; 
+  padding: 10px;
+  border-bottom: 2px solid #f7c600; 
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header img#imageHeader {
+  max-height: 50px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+nav a:hover {
+  color: #f7c600; 
+  font-size: x-large;
+}
+
+
+#title {
+  text-align: center;
+  color: #f7c600;
+}
